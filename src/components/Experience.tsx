@@ -5,46 +5,40 @@ const Experience = () => {
   const experiences = {
     work: [
       {
-        company: 'Tech Solutions Inc.',
-        role: 'Senior Full Stack Developer',
-        period: '2021 - Present',
-        description: 'Leading development of enterprise web applications and mentoring junior developers.',
-        tech: ['React', 'Node.js', 'AWS']
+        company: 'AM WEB Solutions',
+        role: 'FullStack Middle Developer',
+        period: '2023 - Present',
+        description: 'Leading development of a new web and mobile application and improving existing features.',
+        tech: ['FastAPI', 'Laravel', 'VueJS', 'React', 'Mysql']
       },
       {
-        company: 'Digital Innovations Ltd',
-        role: 'Frontend Developer',
-        period: '2019 - 2021',
-        description: 'Developed responsive web applications and improved site performance by 40%.',
+        company: 'Konecta Digital (Comdata)',
+        role: 'Backend Developer & Exploit Support',
+        period: '2022 - 2023',
+        description: 'Developping and enhancing tools used by call center and providing technical support to client arround the world.',
         tech: ['Vue.js', 'TypeScript', 'GraphQL']
       }
     ],
     community: [
       {
-        name: 'Tech Mentors Network',
-        role: 'Lead Mentor',
-        period: '2020 - Present',
-        description: 'Mentoring aspiring developers and organizing coding workshops.'
+        name: 'iTeam-s Community',
+        role: 'Head & Member',
+        period: '2020-2023',
+        description: 'Young community of developers and designers, where we share knowledge and help each other. Developing projects, organizing events and workshops.',
       },
       {
-        name: 'Open Source Contributors',
-        role: 'Core Contributor',
-        period: '2019 - Present',
-        description: 'Contributing to various open-source projects and reviewing pull requests.'
+        name: 'GDG Antananarivo & GDSC ESTI',
+        role: 'Core Member',
+        period: '2022-2023',
+        description: 'Google Developer Group and Google Developer Student Club, where we organize events and workshops to bring together local developers and students.'
       }
     ],
     clubs: [
       {
-        name: 'Local JavaScript Club',
-        role: 'Organizer',
-        period: '2021 - Present',
-        description: 'Organizing monthly meetups and technical workshops.'
-      },
-      {
-        name: 'Web Dev Society',
-        role: 'Technical Speaker',
-        period: '2020 - Present',
-        description: 'Regular speaker on modern web development topics.'
+        name: 'Makoto Japanese Club',
+        role: 'Student Member',
+        period: '2024 - Present',
+        description: 'Learning and sharing Japanese language and culture.'
       }
     ]
   };
