@@ -14,7 +14,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, showNavbar = true }) 
 
   return (
     <div className="bg-gradient-to-br from-dark-900 to-dark-800 min-h-screen relative overflow-hidden">
-      <div className="absolute inset-0 z-20">
+      <div className="absolute inset-0">
         <BackgroundDecorations />
       </div>
       {showNavbar && <Navbar />}
