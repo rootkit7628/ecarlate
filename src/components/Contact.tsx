@@ -25,7 +25,7 @@ const Contact = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
               <Mail className="h-6 w-6 text-accent-red" />
-              <span className="text-gray-300">contact@example.com</span>
+              <span className="text-gray-300">arleme.dev7@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4">
               <MessageSquare className="h-6 w-6 text-accent-red" />
@@ -33,7 +33,7 @@ const Contact = () => {
             </div>
             <p className="text-gray-400 mt-4">
               I'm always interested in hearing about new projects and opportunities.
-              Feel free to reach out if you want to collaborate or just say hi!
+              Feel free to reach out if you want to collaborate or just say hi :)
             </p>
           </div>
           

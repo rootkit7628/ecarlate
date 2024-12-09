@@ -7,18 +7,16 @@ const Interests = () => {
       category: 'Video Games',
       icon: <Gamepad2 className="h-12 w-12 text-accent-red" />,
       items: [
-        { name: 'RPG Games', description: 'Final Fantasy, Persona, Dragon Quest' },
-        { name: 'Action Games', description: 'Devil May Cry, Nier: Automata' },
-        { name: 'Strategy Games', description: 'Fire Emblem, Disgaea' }
+        { description: 'Red dead redemption, Dark Souls, Elden Ring' },
+        { description: 'Clash of Clans, Age of Empires' }
       ]
     },
     {
       category: 'Anime',
       icon: <Tv className="h-12 w-12 text-accent-red" />,
       items: [
-        { name: 'Shonen', description: 'One Piece, Jujutsu Kaisen, Demon Slayer' },
-        { name: 'Seinen', description: 'Monster, Vinland Saga' },
-        { name: 'Slice of Life', description: 'Your Lie in April, A Silent Voice' }
+        { description: 'One Piece, HxH, Jujutsu Kaisen, Gintama' },
+        { description: 'Monster, Vinland Saga, Attack on Titan'  },
       ]
     },
     {
@@ -26,17 +24,14 @@ const Interests = () => {
       icon: <Book className="h-12 w-12 text-accent-red" />,
       items: [
         { name: 'Action', description: 'Berserk, Vagabond, Kingdom' },
-        { name: 'Mystery', description: '20th Century Boys, Death Note' },
-        { name: 'Sports', description: 'Slam Dunk, Haikyuu!!' }
       ]
     },
     {
       category: 'Japanese Culture',
       icon: <Globe2 className="h-12 w-12 text-accent-red" />,
       items: [
-        { name: 'Traditional Arts', description: 'Calligraphy, Tea Ceremony' },
-        { name: 'Modern Culture', description: 'J-Pop, Street Fashion' },
-        { name: 'Cuisine', description: 'Ramen, Sushi, Traditional Dishes' }
+        { description: 'J-Pop, Kendo, Katana' },
+        {  description: 'Ramen, Sushi, Traditional Dishes' }
       ]
     }
   ];
@@ -67,9 +62,6 @@ const Interests = () => {
                     key={itemIndex}
                     className="bg-dark-800 p-4 rounded-lg hover:bg-dark-600 transition-colors duration-300"
                   >
-                    <h4 className="text-lg font-medium text-accent-red mb-2">
-                      {item.name}
-                    </h4>
                     <p className="text-gray-400">
                       {item.description}
                     </p>

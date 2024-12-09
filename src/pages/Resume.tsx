@@ -1,7 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Github, Linkedin, Download, ArrowLeft } from 'lucide-react';
+import resume from '../assets/pdf/arleme-johnson-resume.pdf';
 
 const Resume = () => {
   return (
@@ -19,26 +19,26 @@ const Resume = () => {
           {/* Header */}
           <div className="flex justify-between items-start border-b border-dark-600 pb-6 mb-6">
             <div>
-              <h1 className="text-4xl font-bold text-white mb-2">John Doe</h1>
+              <h1 className="text-4xl font-bold text-white mb-2">Arleme Johnson</h1>
               <h2 className="text-xl text-accent-red mb-4">Full Stack Developer</h2>
               <div className="space-y-2 text-gray-400">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>john.doe@example.com</span>
+                  <span>arleme.dev7@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+261 38 66 550 99</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
-                  <span>San Francisco, CA</span>
+                  <span>Antananrivo 101, M/Car</span>
                 </div>
               </div>
             </div>
             <div className="flex gap-4">
               <a
-                href="/resume.pdf"
+                href={ resume}
                 download
                 className="flex items-center gap-2 px-4 py-2 bg-accent-red hover:bg-accent-redDark text-white rounded-lg transition-colors"
               >
@@ -52,8 +52,8 @@ const Resume = () => {
           <section className="mb-8">
             <h3 className="text-xl font-semibold text-white mb-4">Professional Summary</h3>
             <p className="text-gray-400 leading-relaxed">
-              Experienced Full Stack Developer with 5+ years of expertise in building scalable web applications.
-              Specialized in React, Node.js, and cloud technologies. Passionate about creating efficient,
+              Experienced Full Stack Developer with 4+ years of expertise in building scalable web applications.
+              Specialized in Python/VueJS. Passionate about creating efficient,
               maintainable code and delivering exceptional user experiences.
             </p>
           </section>

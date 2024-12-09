@@ -1,31 +1,32 @@
-import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import aetravel from '../assets/img/projects/img_aetravel.jpg';
+import ampalibe from '../assets/img/projects/img_ampalibe.png';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform built with React, Node.js, and MongoDB.',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github: 'https://github.com',
-      live: 'https://example.com'
+      title: 'AE Travel Madagascar',
+      description: 'A travel agency static website to promote tourism in Madagascar.',
+      image: aetravel,
+      tech: ['HTML', 'Boostrap'],
+      github: 'https://github.com/gaetan1903/Agence',
+      live: 'https://www.ae-travel-mada.com'
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates.',
-      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80',
-      tech: ['React', 'Firebase', 'Tailwind CSS'],
-      github: 'https://github.com',
-      live: 'https://example.com'
+      title: 'Ampalibe Framework',
+      description: 'A Python framework for building facebook messenger chatbots efficiently.',
+      image: ampalibe,
+      tech: ['FastAPI', 'Meta Messenger API', 'MySQL', 'Shell'],
+      github: 'https://github.com/iTeam-S/Ampalibe',
+      live: 'https://ampalibe.readthedocs.io'
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A weather forecasting application using modern APIs and data visualization.',
+      title: 'WebSearch',
+      description: 'Python module allowing you to do various searches for links on the Web.',
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=800&q=80',
-      tech: ['React', 'D3.js', 'OpenWeather API'],
-      github: 'https://github.com',
-      live: 'https://example.com'
+      tech: ['Flask', 'BeautifulSoup', 'Scrapping'],
+      github: 'https://github.com/iTeam-S/WebSearch',
+      live: 'https://github.com/iTeam-S/WebSearch'
     }
   ];
 

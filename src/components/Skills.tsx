@@ -18,22 +18,22 @@ const Skills = () => {
       title: 'Frontend',
       icon: <LayoutGrid className="h-6 w-6 text-accent-red" />,
       skills: [
-        { name: 'React', icon: '⚛️' },
+        { name: 'VueJS', icon: '⚛️' },
         { name: 'TypeScript', icon: '📘' },
-        { name: 'Tailwind CSS', icon: '🎨' },
-        { name: 'Next.js', icon: '▲' },
-        { name: 'Redux', icon: '🔄' }
+        { name: 'Tailwind', icon: '🎨' },
+        { name: 'Bootstrap', icon: '▲' }
       ]
     },
     {
       title: 'Backend',
       icon: <Server className="h-6 w-6 text-accent-red" />,
       skills: [
-        { name: 'Node.js', icon: '🟢' },
-        { name: 'Express', icon: '🚂' },
+        { name: 'FastAPI', icon: '🟢' },
+        { name: 'Laravel', icon: '🚂' },
         { name: 'PostgreSQL', icon: '🐘' },
         { name: 'MongoDB', icon: '🍃' },
-        { name: 'GraphQL', icon: '◈' }
+        { name: 'GraphQL', icon: '◈' },
+        { name: 'Linux SysAdmin', icon: '🐧' },
       ]
     },
     {
@@ -42,9 +42,9 @@ const Skills = () => {
       skills: [
         { name: 'Git', icon: '📦' },
         { name: 'Docker', icon: '🐳' },
-        { name: 'AWS', icon: '☁️' },
-        { name: 'Jest', icon: '🃏' },
-        { name: 'CI/CD', icon: '🔄' }
+        { name: 'CI/CD', icon: '🔄' },
+        { name: 'Github Copilot', icon: '🔄' },
+        { name: 'Trello', icon: '🔧' },
       ]
     }
   ];

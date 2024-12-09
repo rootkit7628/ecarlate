@@ -1,4 +1,3 @@
-import React from 'react';
 import { Building2, Users, Trophy, Calendar } from 'lucide-react';
 
 const Experience = () => {
