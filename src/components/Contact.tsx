@@ -5,7 +5,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    subject: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -39,47 +40,53 @@ const Contact = () => {
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-300">
-                Name
-              </label>
               <input
                 type="text"
                 id="name"
                 value={formData.name}
+                placeholder="Name"
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="mt-1 block w-full rounded-md bg-dark-700 border-dark-600 text-gray-300 focus:border-accent-red focus:ring-accent-red"
                 required
               />
             </div>
-            
+
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-300">
-                Email
-              </label>
               <input
                 type="email"
                 id="email"
                 value={formData.email}
+                placeholder="Email"
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="mt-1 block w-full rounded-md bg-dark-700 border-dark-600 text-gray-300 focus:border-accent-red focus:ring-accent-red"
                 required
               />
             </div>
-            
+
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-300">
-                Message
-              </label>
+              <input
+                type="text"
+                id="subject"
+                value={formData.subject}
+                placeholder="Subject, it's about what ?"
+                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                className="mt-1 block w-full rounded-md bg-dark-700 border-dark-600 text-gray-300 focus:border-accent-red focus:ring-accent-red"
+                required
+              />
+            </div>
+
+            <div>
               <textarea
                 id="message"
                 rows={4}
                 value={formData.message}
+                placeholder="Your message, What's up ?"
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="mt-1 block w-full rounded-md bg-dark-700 border-dark-600 text-gray-300 focus:border-accent-red focus:ring-accent-red"
                 required
               ></textarea>
             </div>
-            
+
             <button
               type="submit"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-accent-red hover:bg-accent-redDark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-red transition-colors duration-300"

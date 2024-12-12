@@ -40,13 +40,13 @@ const Hero = () => {
           
           <div className="flex flex-col items-center gap-8 mb-12">
             <div className="flex justify-center space-x-6">
-              <a href="https://github.com" className="text-gray-400 hover:text-accent-red transition-colors">
+              <a href="https://github.com/rootkit7629" className="text-gray-400 hover:text-accent-red transition-colors">
                 <Github className="h-8 w-8" />
               </a>
-              <a href="https://linkedin.com" className="text-gray-400 hover:text-accent-red transition-colors">
+              <a href="https://linkedin.com/in/arleme-jhn" className="text-gray-400 hover:text-accent-red transition-colors">
                 <Linkedin className="h-8 w-8" />
               </a>
-              <a href="mailto:contact@example.com" className="text-gray-400 hover:text-accent-red transition-colors">
+              <a href="mailto:arleme.dev7@gmail.com" className="text-gray-400 hover:text-accent-red transition-colors">
                 <Mail className="h-8 w-8" />
               </a>
             </div>

@@ -22,11 +22,6 @@ const BackgroundDecorations = () => {
         <Gamepad2 className="w-16 h-16" />
       </div>
 
-      {/* Anime */}
-      <div className="absolute top-1/2 left-1/3 text-accent-red/30 animate-float">
-        <MonitorPlay className="w-12 h-12" />
-      </div>
-
       {/* ASCII Art */}
       <pre className="absolute bottom-40 left-1/3 text-accent-red/20 font-mono text-xs transform -rotate-12">
 {`

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Mail, Phone, MapPin, Github, Linkedin, Download, ArrowLeft } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Download, ArrowLeft, PhoneIcon } from 'lucide-react';
+import { FR, MG, JP, US } from 'country-flag-icons/react/3x2';
 import resume from '../assets/pdf/arleme-johnson-resume.pdf';
 
 const Resume = () => {
@@ -63,21 +64,31 @@ const Resume = () => {
             <h3 className="text-xl font-semibold text-white mb-4">Work Experience</h3>
             <div className="space-y-6">
               <div className="border-l-2 border-accent-red pl-4">
-                <h4 className="text-lg font-medium text-white">Senior Full Stack Developer</h4>
-                <div className="text-accent-red mb-2">Tech Solutions Inc. • 2021 - Present</div>
+                <h4 className="text-lg font-medium text-white">FullStack Middle Developer</h4>
+                <div className="text-accent-red mb-2">AM WEB Solutions. • 2023 - Present</div>
                 <ul className="list-disc list-inside text-gray-400 space-y-2">
-                  <li>Led development of enterprise web applications using React and Node.js</li>
-                  <li>Implemented CI/CD pipelines reducing deployment time by 40%</li>
-                  <li>Mentored junior developers and conducted code reviews</li>
+                  <li>Developing web apps or integrate API using VueJS/Reat - FastAPI/Laravel</li>
+                  <li>Configuring linux servers [WebServer, Package, Container, VPS, CPanel, ...]</li>
+                  <li>CI [Unites/Integration Tests, Code Quality & Complexity] & CD [Build Pipeline]</li>
                 </ul>
               </div>
               <div className="border-l-2 border-accent-red pl-4">
-                <h4 className="text-lg font-medium text-white">Frontend Developer</h4>
-                <div className="text-accent-red mb-2">Digital Innovations Ltd • 2019 - 2021</div>
+                <h4 className="text-lg font-medium text-white">Exploit Developer & SysAdmin</h4>
+                <div className="text-accent-red mb-2">Konnecta Digital (Comdata) • 2022 - 2023</div>
                 <ul className="list-disc list-inside text-gray-400 space-y-2">
-                  <li>Developed responsive web applications using Vue.js and TypeScript</li>
-                  <li>Improved site performance by 40% through optimization techniques</li>
-                  <li>Integrated third-party APIs and implemented real-time features</li>
+                  <li>Maintain & Develop tools for our call centers</li>
+                  <li>Optimize Process and Database Performance</li>
+                  <li>Taking care of issues tickets and improvements requests</li>
+                  <li>Monitoring Production Server</li>
+                </ul>
+              </div>
+              <div className="border-l-2 border-accent-red pl-4">
+                <h4 className="text-lg font-medium text-white">HEAD & Member / Developer</h4>
+                <div className="text-accent-red mb-2">iTeam-s Community • 2022 - 2023</div>
+                <ul className="list-disc list-inside text-gray-400 space-y-2">
+                  <li>Creating and managing a community of young to develop IT and soft skills</li> 
+                  <li>Participing in Hackathon Awards and IT Events</li>
+                  <li>Contribute into Open Source Projects</li>
                 </ul>
               </div>
             </div>
@@ -86,11 +97,11 @@ const Resume = () => {
           {/* Skills */}
           <section className="mb-8">
             <h3 className="text-xl font-semibold text-white mb-4">Technical Skills</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               <div>
                 <h4 className="text-accent-red mb-2">Frontend</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Redux'].map((skill) => (
+                  {['React', 'VueJs', 'TypeScript', 'Tailwind', 'Bootstrap'].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-dark-700 rounded-full text-gray-300">
                       {skill}
                     </span>
@@ -100,7 +111,17 @@ const Resume = () => {
               <div>
                 <h4 className="text-accent-red mb-2">Backend</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'GraphQL'].map((skill) => (
+                  {['Python', 'FastAPI', 'MySQL', 'PostgreSQL', 'MongoDB'].map((skill) => (
+                    <span key={skill} className="px-3 py-1 bg-dark-700 rounded-full text-gray-300">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-accent-red mb-2">Devops</h4>
+                <div className="flex flex-wrap gap-2">
+                  {['Docker', 'Github Actions', 'Gitlab'].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-dark-700 rounded-full text-gray-300">
                       {skill}
                     </span>
@@ -111,25 +132,80 @@ const Resume = () => {
           </section>
 
           {/* Education */}
-          <section>
+          <section  className="mb-8">
             <h3 className="text-xl font-semibold text-white mb-4">Education</h3>
             <div className="border-l-2 border-accent-red pl-4">
               <h4 className="text-lg font-medium text-white">Bachelor of Science in Computer Science</h4>
-              <div className="text-accent-red">University of Technology • 2015 - 2019</div>
+              <div className="text-accent-red">ESTI University • 2021 - 2023</div>
               <p className="text-gray-400 mt-2">
                 Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems
               </p>
+            </div>
+            <div className="border-l-2 border-accent-red pl-4">
+              <h4 className="text-lg font-medium text-white">Preparatory Year</h4>
+              <div className="text-accent-red">Program Sesame • 2021 - 2023</div>
+              <p className="text-gray-400 mt-2">
+                Preparing for university studies and professional life
+              </p>
+            </div>
+            <div className="border-l-2 border-accent-red pl-4">
+              <h4 className="text-lg font-medium text-white">Baccalaureate Deegre</h4>
+              <div className="text-accent-red">Saint Joseph of Cluny • 2021 - 2023</div>
+              <p className="text-gray-400 mt-2">
+                Sience Catgory : Level GOOD
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="text-xl font-semibold text-white mb-4">Communications</h3>
+            <div className="grid grid-cols-4 gap-4">
+              <div>
+                <div className="flex flex-wrap" >
+                  <p className='bg-dark-600 rounded-sm w-3/4 p-2'>
+                    <span><MG className='h-7 w-7' /></span>
+                    <span className="text-white-100">Native</span>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-wrap">
+                  <p className='bg-dark-600 rounded-sm w-3/4 p-2'>
+                    <span><FR className='h-7 w-7' /></span>
+                    <span className="text-white-100">Fluent</span>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-wrap">
+                  <p className='bg-dark-600 rounded-sm w-3/4 p-2'>
+                    <span><US className='h-7 w-7' /></span>
+                    <span className="text-white-100">Professional</span>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-wrap ">
+                  <p className='bg-dark-600 rounded-sm w-3/4 p-2'>
+                    <span><JP className='h-7 w-7' /></span>
+                    <span className="text-white-100">Newbie</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 
           {/* Footer */}
           <footer className="mt-8 pt-6 border-t border-dark-600">
             <div className="flex justify-center gap-4">
-              <a href="https://github.com" className="text-gray-400 hover:text-accent-red transition-colors">
+              <a href="https://github.com/rootkit7628" className="text-gray-400 hover:text-white-700red transition-colors">
                 <Github className="h-6 w-6" />
               </a>
-              <a href="https://linkedin.com" className="text-gray-400 hover:text-accent-red transition-colors">
+              <a href="https://linkedin.com/in/arleme-jhn" className="text-gray-400 hover:text-accent-red transition-colors">
                 <Linkedin className="h-6 w-6" />
+              </a>
+              <a href="tel:+261386655099" className="text-gray-400 hover:text-accent-red transition-colors">
+                <PhoneIcon className="h-6 w-6" />
               </a>
             </div>
           </footer>
