@@ -6,7 +6,7 @@ const About = () => {
     <section id="about" className="py-20 bg-dark-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-white mb-12">
-          Wghat can I do for you?
+          What can I do for you?
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
@@ -52,14 +52,14 @@ const About = () => {
               DevOps & Infrastructure
             </h3>
             <p className="text-gray-400 mb-4">
-              Implementing CI/CD pipelines, container orchestration, and cloud infrastructure automation.
+              Implementing CI/CD pipelines, container orchestration, server monitoring.
             </p>
             <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-dark-600 text-sm text-gray-300 rounded-full">
                   Docker
                 </span>
                 <span className="px-3 py-1 bg-dark-600 text-sm text-gray-300 rounded-full">
-                  Gitlab
+                  Linux
                 </span>
                 <span className="px-3 py-1 bg-dark-600 text-sm text-gray-300 rounded-full">
                   Github Actions
@@ -70,7 +70,7 @@ const About = () => {
 
         <div className="mt-12 bg-dark-700 p-8 rounded-lg">
           <p className="text-gray-300 leading-relaxed">
-            With over 4 years of experience in web development and programming, I specialize in building modern applications.
+            With over 4 years of experiences in web development and programming, I specialize in building modern applications.
             I'm passionate about creating clean, efficient code and delivering exceptional user experiences.
             When I'm not coding, you can find me contributing to open-source projects or learning new technologies.
           </p>

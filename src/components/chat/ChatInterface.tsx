@@ -13,7 +13,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       type: MessageType.Bot,
-      content: "Hi! I'm John's AI assistant. I can tell you about my experience, projects, or interests in gaming, anime, and tech. What would you like to know?",
+      content: "こんにちは ! I'm Jinkxy. Build to be an AI Assistant for my master's website ? He's still struggling building me so be patient Hihi. Sayonara",
       timestamp: new Date()
     }
   ]);
@@ -74,7 +74,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ isOpen, onClose }) => {
     >
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-dark-600">
-        <h3 className="text-lg font-semibold text-white">Chat with John's AI</h3>
+        <h3 className="text-lg font-semibold text-white">Jinkxy (⌒‿⌒)</h3>
         <button
           onClick={onClose}
           className="text-gray-400 hover:text-white transition-colors"

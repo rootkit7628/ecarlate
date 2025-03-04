@@ -7,14 +7,14 @@ const Experience = () => {
         company: 'AM WEB Solutions',
         role: 'FullStack Middle Developer',
         period: '2023 - Present',
-        description: 'Leading development of a new web and mobile application and improving existing features.',
+        description: 'Leading development of web and mobile apps projects and improving existing features.',
         tech: ['FastAPI', 'Laravel', 'VueJS', 'React', 'Mysql']
       },
       {
         company: 'Konecta Digital (Comdata)',
         role: 'Backend Developer & Exploit Support',
         period: '2022 - 2023',
-        description: 'Developping and enhancing tools used by call center and providing technical support to client arround the world.',
+        description: 'Developping and enhancing tools used by call centers and providing technical support to client arround the world.',
         tech: ['Vue.js', 'TypeScript', 'GraphQL']
       }
     ],
