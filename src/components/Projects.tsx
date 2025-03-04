@@ -1,6 +1,6 @@
 import { ExternalLink, Github } from 'lucide-react';
-import aetravel from '../assets/img/projects/img_aetravel.jpg';
-import ampalibe from '../assets/img/projects/img_ampalibe.png';
+import aetravel from '../assets/img/projects/img_aetravel.webp';
+import ampalibe from '../assets/img/projects/img_ampalibe.webp';
 
 const Projects = () => {
   const projects = [

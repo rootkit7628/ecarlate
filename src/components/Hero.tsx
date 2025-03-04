@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Linkedin, Mail, ChevronDown, FileDown, Briefcase, Code2, Award } from 'lucide-react';
-import profile from '../assets/img/profile_illustration.jpg';
+import profile from '../assets/img/profile_illustration.webp';
 
 const Hero = () => {
   return (
