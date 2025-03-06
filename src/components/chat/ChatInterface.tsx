@@ -78,6 +78,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ isOpen, onClose }) => {
         <button
           onClick={onClose}
           className="text-gray-400 hover:text-white transition-colors"
+          aria-label="Open Chat"
         >
           <X className="h-5 w-5" />
         </button>
@@ -104,6 +105,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ isOpen, onClose }) => {
           <button
             onClick={handleSend}
             className="p-2 bg-accent-red rounded-lg hover:bg-accent-redDark transition-colors"
+            aria-label="Sending Message"
           >
             <Send className="h-5 w-5 text-white" />
           </button>

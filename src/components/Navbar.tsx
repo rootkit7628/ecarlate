@@ -31,8 +31,10 @@ const Navbar = () => {
           
           <div className="md:hidden">
             <button
+              id="open_menu"
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-400 hover:text-white focus:outline-none"
+              aria-label="Open Menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
