@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, ChevronDown, FileDown, Briefcase, Code2, Award } from 'lucide-react';
+import Lottie from 'lottie-react';
+import codeLottie from '../assets/lotties/code.json';
+import workLottie from '../assets/lotties/work.json';
+import awardLottie from '../assets/lotties/award.json';
+import { Github, Linkedin, Mail, ChevronDown, FileDown } from 'lucide-react';
 import profile from '../assets/img/profile_illustration.webp';
 
 const Hero = () => {
@@ -62,19 +66,19 @@ const Hero = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-12">
             <div className="bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg">
-              <Briefcase className="h-8 w-8 text-accent-red mx-auto mb-2" />
+              <Lottie animationData={workLottie} className="h-8 w-8 mx-auto mb-2" loop={true} />
               <div className="text-2xl font-bold text-white">4+</div>
               <div className="text-gray-400">Years Experience</div>
             </div>
             <div className="bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg">
-              <Code2 className="h-8 w-8 text-accent-red mx-auto mb-2" />
+              <Lottie animationData={codeLottie} className="h-8 w-8 mx-auto mb-2" loop={true} />
               <div className="text-2xl font-bold text-white">20+</div>
               <div className="text-gray-400">Projects Done</div>
             </div>
             <div className="bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg">
-              <Award className="h-8 w-8 text-accent-red mx-auto mb-2" />
+              <Lottie animationData={awardLottie} className="h-8 w-8 mx-auto mb-2" loop={true} />
               <div className="text-2xl font-bold text-white">5+</div>
-              <div className="text-gray-400">Awards Winned</div>
+              <div className="text-gray-400">Awards Won</div>
             </div>
             <div className="bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg">
               <Github className="h-8 w-8 text-accent-red mx-auto mb-2" />
