@@ -33,7 +33,7 @@ const Resume = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
-                  <span>Antananrivo 101, M/Car</span>
+                  <span>Antananarivo 101, M/Car</span>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@ const Resume = () => {
                 <h4 className="text-lg font-medium text-white">FullStack Middle Developer</h4>
                 <div className="text-accent-red mb-2">AM WEB Solutions. • 2023 - Present</div>
                 <ul className="list-disc list-inside text-gray-400 space-y-2">
-                  <li>Developing web apps or integrate API using VueJS/Reat - FastAPI/Laravel</li>
+                  <li>Developing web apps or integrate API using VueJS/React - FastAPI/Laravel</li>
                   <li>Configuring linux servers [WebServer, Package, Container, VPS, CPanel, ...]</li>
                   <li>CI [Unites/Integration Tests, Code Quality & Complexity] & CD [Build Pipeline]</li>
                 </ul>
