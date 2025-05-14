@@ -1,5 +1,6 @@
 import React from 'react';
 import { Code, Cpu, Settings } from 'lucide-react';
+import SpotlightCard from './reactbits/SpotlightCard/SpotlightCard'
 
 const About = () => {
   return (
@@ -10,7 +11,7 @@ const About = () => {
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-dark-700 p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
+          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255, 51, 51, 0.2)" autoAnimate={true}>
             <Code className="h-12 w-12 text-accent-red mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">
               Frontend Development
@@ -26,9 +27,9 @@ const About = () => {
                   VueJS
                 </span>
             </div>
-          </div>
+          </SpotlightCard>
           
-          <div className="bg-dark-700 p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
+          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255, 51, 51, 0.2)" autoAnimate={true}>
             <Cpu className="h-12 w-12 text-accent-red mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">
               Backend Development
@@ -44,9 +45,9 @@ const About = () => {
                   Laravel
                 </span>
             </div>
-          </div>
-          
-          <div className="bg-dark-700 p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
+          </SpotlightCard>
+
+          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255, 51, 51, 0.2)" autoAnimate={true}>
             <Settings className="h-12 w-12 text-accent-red mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">
               DevOps & Infrastructure
@@ -65,7 +66,7 @@ const About = () => {
                   Github Actions
                 </span>
             </div>
-          </div>
+          </SpotlightCard>
         </div>
 
         <div className="mt-12 bg-dark-700 p-8 rounded-lg">
