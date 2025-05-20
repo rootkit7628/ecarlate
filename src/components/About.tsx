@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code, Cpu, Settings } from 'lucide-react';
 import SpotlightCard from './reactbits/SpotlightCard/SpotlightCard'
 
@@ -69,13 +68,13 @@ const About = () => {
           </SpotlightCard>
         </div>
 
-        <div className="mt-12 bg-dark-700 p-8 rounded-lg">
+        <SpotlightCard className="custom-spotlight-card mt-10" spotlightColor="rgba(255, 51, 51, 0.2)" autoAnimate={true}>
           <p className="text-gray-300 leading-relaxed">
             With over 4 years of experiences in web development and programming, I specialize in building modern applications.
             I'm passionate about creating clean, efficient code and delivering exceptional user experiences.
             When I'm not coding, you can find me contributing to open-source projects or learning new technologies.
           </p>
-        </div>
+        </SpotlightCard>
       </div>
     </section>
   );

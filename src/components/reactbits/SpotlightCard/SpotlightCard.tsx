@@ -18,7 +18,6 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
   autoAnimate = false
 }) => {
   const divRef = useRef<HTMLDivElement>(null);
-  const [isFocused, setIsFocused] = useState<boolean>(false);
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState<number>(0);
   const animationRef = useRef<number>();
@@ -65,41 +64,8 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
     }
   }, [autoAnimate, animateSpotlight]);
 
-  const handleMouseMove: React.MouseEventHandler<HTMLDivElement> = (e) => {
-    if (!divRef.current || isFocused || autoAnimate) return;
-
-    const rect = divRef.current.getBoundingClientRect();
-    setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
-
-  const handleFocus = () => {
-    setIsFocused(true);
-    setOpacity(0.6);
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
-    setOpacity(0);
-  };
-
-  const handleMouseEnter = () => {
-    setOpacity(0.6);
-  };
-
-  const handleMouseLeave = () => {
-    setOpacity(0);
-  };
-
   return (
-    <div
-      ref={divRef}
-      onMouseMove={handleMouseMove}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
-      onMouseEnter={!autoAnimate ? handleMouseEnter : undefined}
-      onMouseLeave={!autoAnimate ? handleMouseLeave : undefined}
-      className={`relative rounded-lg border border-neutral-800 bg-neutral-900 overflow-hidden p-8 ${className}`}
-    >
+    <div ref={divRef} className={`relative rounded-lg border border-neutral-800 bg-neutral-900 overflow-hidden p-8 ${className}`}>
       <div
         className="pointer-events-none absolute inset-0 opacity-0"
         style={{
