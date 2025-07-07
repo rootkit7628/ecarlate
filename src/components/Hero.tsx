@@ -19,7 +19,7 @@ const Hero = () => {
                 <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-accent-red shadow-lg transform hover:scale-105 transition-transform duration-300">
                   <img
                     src={ profile }
-                    alt="Arleme Johnson - Full Stack Developer Profile Picture"
+                    alt="Arleme Johnson - FastAPI/VueJS Developer Profile Picture"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -33,7 +33,7 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-2xl sm:text-4xl font-semibold text-gray-300 mb-8">
-                Full Stack Developer
+                FastAPI/VueJS Developer
               </p>
               <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
                 Building beautiful, responsive, and user-friendly web apps or software
