@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://arleme-johnson.com/sitemap.xml
+Sitemap: https://arleme.jinkx.fun/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 1

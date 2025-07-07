@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://arleme-johnson.com/</loc>
+    <loc>https://arleme.jinkx.fun/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <lastmod>2024-01-01</lastmod>
     <image:image>
-      <image:loc>https://arleme-johnson.com/assets/profile_illustration.webp</image:loc>
-      <image:caption>Arleme Johnson - Full Stack Developer</image:caption>
+      <image:loc>https://arleme.jinkx.fun/assets/profile_illustration.webp</image:loc>
+      <image:caption>Arleme Johnson - FastAPI/VueJS Developer</image:caption>
       <image:title>Arleme Johnson Profile</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://arleme-johnson.com/resume</loc>
+    <loc>https://arleme.jinkx.fun/resume</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2024-01-01</lastmod>
