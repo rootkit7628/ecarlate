@@ -1,8 +1,12 @@
 import { ExternalLink, Github } from 'lucide-react';
 import aetravel from '../assets/img/projects/img_aetravel.webp';
 import ampalibe from '../assets/img/projects/img_ampalibe.webp';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Projects = () => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.3 });
+  const { elementRef: projectsRef, isVisible: projectsVisible } = useScrollAnimation({ threshold: 0.1 });
+
   const projects = [
     {
       title: 'AE Travel Madagascar',
@@ -33,15 +37,30 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-dark-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">
+        <h2 
+          ref={titleRef}
+          className={`text-3xl font-bold text-center text-white mb-12 transform transition-all duration-1000 ${
+            titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
           Featured Projects
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+          ref={projectsRef}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-dark-800 rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+              className={`bg-dark-800 rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-500 ${
+                projectsVisible 
+                  ? 'translate-y-0 opacity-100' 
+                  : 'translate-y-10 opacity-0'
+              }`}
+              style={{
+                transitionDelay: projectsVisible ? `${index * 200}ms` : '0ms'
+              }}
             >
               <img
                 src={project.image}

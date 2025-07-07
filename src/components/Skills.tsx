@@ -15,8 +15,12 @@ import {
   SiTrello,
 } from "react-icons/si";
 import { LayoutGrid, Server, Wrench } from "lucide-react";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const Skills = () => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ threshold: 0.3 });
+  const { elementRef: scrollRef, isVisible: scrollVisible } = useScrollAnimation({ threshold: 0.2 });
+
   const skillCategories = [
     {
       title: "Frontend",
@@ -52,34 +56,55 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-dark-800">
+    <section id="skills" className="py-20 bg-dark-800 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">
+        <h2 
+          ref={titleRef}
+          className={`text-3xl font-bold text-center text-white mb-12 transform transition-all duration-1000 ${
+            titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
           Skills & Technologies
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="bg-dark-700 p-6 rounded-lg">
-              <div className="flex items-center gap-3 mb-4">
-                {category.icon}
-                <h3 className="text-xl font-semibold text-white">
-                  {category.title}
-                </h3>
+        {/* Horizontal scrolling container */}
+        <div 
+          ref={scrollRef}
+          className={`relative transform transition-all duration-1000 delay-300 ${
+            scrollVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
+          }`}
+        >
+          {/* Scroll hint */}
+          <div className="text-center mb-6">
+            <p className="text-gray-400 text-sm">← Scroll horizontally to explore skills →</p>
+          </div>
+          
+          <div className="flex gap-8 overflow-x-auto pb-6 scrollbar-hide">
+            {skillCategories.map((category, index) => (
+              <div 
+                key={index} 
+                className="bg-dark-700 p-6 rounded-lg min-w-[320px] flex-shrink-0 transform hover:scale-105 transition-transform duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  {category.icon}
+                  <h3 className="text-xl font-semibold text-white">
+                    {category.title}
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="px-4 py-2 bg-dark-600 text-gray-300 rounded-lg hover:bg-dark-800 hover:text-white transition-colors duration-300 flex items-center gap-2"
+                    >
+                      <span>{skill.icon}</span>
+                      {skill.name}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-4 py-2 bg-dark-600 text-gray-300 rounded-lg hover:bg-dark-800 hover:text-white transition-colors duration-300 flex items-center gap-2"
-                  >
-                    <span>{skill.icon}</span>
-                    {skill.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

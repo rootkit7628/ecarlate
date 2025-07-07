@@ -6,12 +6,22 @@ import workLottie from '../assets/lotties/work.json';
 import awardLottie from '../assets/lotties/award.json';
 import { Github, Linkedin, Mail, ChevronDown, FileDown } from 'lucide-react';
 import profile from '../assets/img/profile_illustration.webp';
+import { useParallax } from '../hooks/useScrollAnimation';
 
 const Hero = () => {
+  const { parallaxStyle: slowParallax } = useParallax(0.3);
+  const { parallaxStyle: mediumParallax } = useParallax(0.5);
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative bg-dark-900">
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-accent-redDark opacity-20"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div 
+        className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-accent-redDark opacity-20"
+        style={slowParallax}
+      ></div>
+      <div 
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        style={mediumParallax}
+      >
         <div className="text-center">
           <div className="flex flex-col md:flex-row mt-4">
             <div>
