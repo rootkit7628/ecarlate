@@ -19,7 +19,7 @@ const Hero = () => {
                 <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-accent-red shadow-lg transform hover:scale-105 transition-transform duration-300">
                   <img
                     src={ profile }
-                    alt="Profile"
+                    alt="Arleme Johnson - Full Stack Developer Profile Picture"
                     className="w-full h-full object-cover"
                   />
                 </div>
