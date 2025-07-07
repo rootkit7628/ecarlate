@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, Code, Gamepad2, MonitorPlay, Code2, Binary } from 'lucide-react';
+import { Terminal, Gamepad2, Code2, Binary } from 'lucide-react';
 
 const BackgroundDecorations = () => {
   return (
