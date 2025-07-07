@@ -1,4 +1,5 @@
 import { Building2, Users, Trophy, Calendar } from 'lucide-react';
+import Timeline from './Timeline';
 
 const Experience = () => {
   const experiences = {
@@ -55,28 +56,7 @@ const Experience = () => {
             <Building2 className="h-8 w-8 text-accent-red" />
             <h3 className="text-2xl font-semibold text-white">Work Experience</h3>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {experiences.work.map((job, index) => (
-              <div key={index} className="bg-dark-800 p-6 rounded-lg hover:bg-dark-700 transition-colors duration-300">
-                <div className="flex justify-between items-start mb-2">
-                  <h4 className="text-xl font-semibold text-white">{job.company}</h4>
-                  <span className="text-accent-red flex items-center">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {job.period}
-                  </span>
-                </div>
-                <p className="text-lg text-accent-red mb-2">{job.role}</p>
-                <p className="text-gray-400 mb-4">{job.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {job.tech.map((tech, techIndex) => (
-                    <span key={techIndex} className="px-3 py-1 bg-dark-600 text-sm text-gray-300 rounded-full">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <Timeline items={experiences.work} />
         </div>
 
         {/* Community Involvement */}
