@@ -44,9 +44,9 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-dark-900">
+    <section id="experience" className="py-20 bg-light-50 dark:bg-dark-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
           Experience & Community
         </h2>
 
@@ -54,7 +54,7 @@ const Experience = () => {
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
             <Building2 className="h-8 w-8 text-accent-red" />
-            <h3 className="text-2xl font-semibold text-white">Work Experience</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Work Experience</h3>
           </div>
           <Timeline items={experiences.work} />
         </div>
@@ -63,20 +63,20 @@ const Experience = () => {
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
             <Users className="h-8 w-8 text-accent-red" />
-            <h3 className="text-2xl font-semibold text-white">Community Involvement</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Community Involvement</h3>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {experiences.community.map((community, index) => (
-              <div key={index} className="bg-dark-800 p-6 rounded-lg hover:bg-dark-700 transition-colors duration-300">
+              <div key={index} className="bg-white dark:bg-dark-800 p-6 rounded-lg hover:bg-light-100 dark:hover:bg-dark-700 transition-colors duration-300 shadow-lg dark:shadow-none">
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="text-xl font-semibold text-white">{community.name}</h4>
+                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">{community.name}</h4>
                   <span className="text-accent-red flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
                     {community.period}
                   </span>
                 </div>
                 <p className="text-lg text-accent-red mb-2">{community.role}</p>
-                <p className="text-gray-400">{community.description}</p>
+                <p className="text-gray-600 dark:text-gray-400">{community.description}</p>
               </div>
             ))}
           </div>
@@ -86,20 +86,20 @@ const Experience = () => {
         <div>
           <div className="flex items-center gap-3 mb-8">
             <Trophy className="h-8 w-8 text-accent-red" />
-            <h3 className="text-2xl font-semibold text-white">Clubs & Organizations</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Clubs & Organizations</h3>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {experiences.clubs.map((club, index) => (
-              <div key={index} className="bg-dark-800 p-6 rounded-lg hover:bg-dark-700 transition-colors duration-300">
+              <div key={index} className="bg-white dark:bg-dark-800 p-6 rounded-lg hover:bg-light-100 dark:hover:bg-dark-700 transition-colors duration-300 shadow-lg dark:shadow-none">
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="text-xl font-semibold text-white">{club.name}</h4>
+                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">{club.name}</h4>
                   <span className="text-accent-red flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
                     {club.period}
                   </span>
                 </div>
                 <p className="text-lg text-accent-red mb-2">{club.role}</p>
-                <p className="text-gray-400">{club.description}</p>
+                <p className="text-gray-600 dark:text-gray-400">{club.description}</p>
               </div>
             ))}
           </div>

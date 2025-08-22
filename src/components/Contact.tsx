@@ -16,9 +16,9 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-dark-900">
+    <section id="contact" className="py-20 bg-light-50 dark:bg-dark-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
           Get In Touch
         </h2>
         
@@ -26,13 +26,13 @@ const Contact = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
               <Mail className="h-6 w-6 text-accent-red" />
-              <span className="text-gray-300">arleme.dev7@gmail.com</span>
+              <span className="text-gray-700 dark:text-gray-300">arleme.dev7@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4">
               <MessageSquare className="h-6 w-6 text-accent-red" />
-              <span className="text-gray-300">Let's discuss your project</span>
+              <span className="text-gray-700 dark:text-gray-300">Let's discuss your project</span>
             </div>
-            <p className="text-gray-400 mt-4">
+            <p className="text-gray-600 dark:text-gray-400 mt-4">
               I'm always interested in hearing about new projects and opportunities.
               Feel free to reach out if you want to collaborate or just say hi :)
             </p>
@@ -46,7 +46,7 @@ const Contact = () => {
                 value={formData.name}
                 placeholder="Name"
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="mt-1 block w-full rounded-md bg-dark-700 border-dark-600 text-gray-300 focus:border-accent-red focus:ring-accent-red"
+                className="mt-1 block w-full rounded-md bg-white dark:bg-dark-700 border-light-300 dark:border-dark-600 text-gray-900 dark:text-gray-300 focus:border-accent-red focus:ring-accent-red transition-colors duration-300"
                 required
               />
             </div>
@@ -58,7 +58,7 @@ const Contact = () => {
                 value={formData.email}
                 placeholder="Email"
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="mt-1 block w-full rounded-md bg-dark-700 border-dark-600 text-gray-300 focus:border-accent-red focus:ring-accent-red"
+                className="mt-1 block w-full rounded-md bg-white dark:bg-dark-700 border-light-300 dark:border-dark-600 text-gray-900 dark:text-gray-300 focus:border-accent-red focus:ring-accent-red transition-colors duration-300"
                 required
               />
             </div>
@@ -70,7 +70,7 @@ const Contact = () => {
                 value={formData.subject}
                 placeholder="Subject, it's about what ?"
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                className="mt-1 block w-full rounded-md bg-dark-700 border-dark-600 text-gray-300 focus:border-accent-red focus:ring-accent-red"
+                className="mt-1 block w-full rounded-md bg-white dark:bg-dark-700 border-light-300 dark:border-dark-600 text-gray-900 dark:text-gray-300 focus:border-accent-red focus:ring-accent-red transition-colors duration-300"
                 required
               />
             </div>
@@ -82,7 +82,7 @@ const Contact = () => {
                 value={formData.message}
                 placeholder="Your message, What's up ?"
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="mt-1 block w-full rounded-md bg-dark-700 border-dark-600 text-gray-300 focus:border-accent-red focus:ring-accent-red"
+                className="mt-1 block w-full rounded-md bg-white dark:bg-dark-700 border-light-300 dark:border-dark-600 text-gray-900 dark:text-gray-300 focus:border-accent-red focus:ring-accent-red transition-colors duration-300"
                 required
               ></textarea>
             </div>

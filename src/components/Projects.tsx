@@ -31,9 +31,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-dark-900">
+    <section id="projects" className="py-20 bg-light-100 dark:bg-dark-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
           Featured Projects
         </h2>
         
@@ -41,7 +41,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-dark-800 rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+              className="bg-white dark:bg-dark-800 rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg dark:shadow-none"
             >
               <img
                 src={project.image}
@@ -49,17 +49,17 @@ const Projects = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-dark-600 text-sm text-gray-300 rounded-full"
+                      className="px-3 py-1 bg-light-200 dark:bg-dark-600 text-sm text-gray-700 dark:text-gray-300 rounded-full"
                     >
                       {tech}
                     </span>
@@ -68,7 +68,7 @@ const Projects = () => {
                 <div className="flex space-x-4">
                   <a
                     href={project.github}
-                    className="text-gray-400 hover:text-accent-red transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-accent-red transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -76,7 +76,7 @@ const Projects = () => {
                   </a>
                   <a
                     href={project.live}
-                    className="text-gray-400 hover:text-accent-red transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-accent-red transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

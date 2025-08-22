@@ -13,7 +13,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, showNavbar = true }) 
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   return (
-    <div className="bg-gradient-to-br from-dark-900 to-dark-800 min-h-screen relative overflow-hidden">
+    <div className="bg-gradient-to-br from-light-50 to-light-100 dark:from-dark-900 dark:to-dark-800 min-h-screen relative overflow-hidden transition-all duration-300">
       <div className="absolute inset-0">
         <BackgroundDecorations />
       </div>

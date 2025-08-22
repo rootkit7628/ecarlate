@@ -7,7 +7,8 @@ html {
 }
 
 body {
-  @apply bg-dark-900 text-gray-100;
+  @apply bg-light-50 text-gray-900 dark:bg-dark-900 dark:text-gray-100;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom scrollbar */
@@ -16,7 +17,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-800;
+  @apply bg-light-200 dark:bg-dark-800;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -29,5 +30,6 @@ body {
 
 /* Form styles */
 input, textarea {
-  @apply px-4 py-2 bg-dark-700 border border-dark-600 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-red;
+  @apply px-4 py-2 bg-light-100 border border-light-300 dark:bg-dark-700 dark:border-dark-600 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-red;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
