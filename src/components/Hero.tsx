@@ -9,8 +9,8 @@ import profile from '../assets/img/profile_illustration.webp';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative bg-dark-900">
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-accent-redDark opacity-20"></div>
+    <section id="hero" className="min-h-screen flex items-center justify-center relative bg-light-50 dark:bg-dark-900 transition-colors duration-300">
+      <div className="absolute inset-0 bg-gradient-to-br from-light-100 via-light-200 to-accent-red dark:from-dark-900 dark:via-dark-800 dark:to-accent-redDark opacity-20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           <div className="flex flex-col md:flex-row mt-4">
@@ -27,15 +27,15 @@ const Hero = () => {
               </div>
             </div>
             <div className="text-left pl-20">
-              <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-white to-accent-red bg-clip-text text-transparent">
+              <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+                <span className="bg-gradient-to-r from-gray-900 dark:from-white to-accent-red bg-clip-text text-transparent">
                   Arleme JOHNSON
                 </span>
               </h1>
-              <p className="text-2xl sm:text-4xl font-semibold text-gray-300 mb-8">
+              <p className="text-2xl sm:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-8">
                 FastAPI/VueJS Developer
               </p>
-              <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
                 Building beautiful, responsive, and user-friendly web apps or software
                 with modern technologies.
               </p>
@@ -44,13 +44,13 @@ const Hero = () => {
           
           <div className="flex flex-col items-center gap-8 mb-12">
             <div className="flex justify-center space-x-6">
-              <a href="https://github.com/rootkit7629" className="text-gray-400 hover:text-accent-red transition-colors">
+              <a href="https://github.com/rootkit7629" className="text-gray-600 dark:text-gray-400 hover:text-accent-red transition-colors">
                 <Github className="h-8 w-8" />
               </a>
-              <a href="https://linkedin.com/in/arleme-jhn" className="text-gray-400 hover:text-accent-red transition-colors">
+              <a href="https://linkedin.com/in/arleme-jhn" className="text-gray-600 dark:text-gray-400 hover:text-accent-red transition-colors">
                 <Linkedin className="h-8 w-8" />
               </a>
-              <a href="mailto:arleme.dev7@gmail.com" className="text-gray-400 hover:text-accent-red transition-colors">
+              <a href="mailto:arleme.dev7@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-accent-red transition-colors">
                 <Mail className="h-8 w-8" />
               </a>
             </div>
@@ -65,31 +65,31 @@ const Hero = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-12">
-            <div className="bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg">
+            <div className="bg-white/50 dark:bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg dark:shadow-none transition-colors duration-300">
               <Lottie animationData={workLottie} className="h-8 w-8 mx-auto mb-2" loop={true} />
-              <div className="text-2xl font-bold text-white">4+</div>
-              <div className="text-gray-400">Years Experience</div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white">4+</div>
+              <div className="text-gray-600 dark:text-gray-400">Years Experience</div>
             </div>
-            <div className="bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg">
+            <div className="bg-white/50 dark:bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg dark:shadow-none transition-colors duration-300">
               <Lottie animationData={codeLottie} className="h-8 w-8 mx-auto mb-2" loop={true} />
-              <div className="text-2xl font-bold text-white">20+</div>
-              <div className="text-gray-400">Projects Done</div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white">20+</div>
+              <div className="text-gray-600 dark:text-gray-400">Projects Done</div>
             </div>
-            <div className="bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg">
+            <div className="bg-white/50 dark:bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg dark:shadow-none transition-colors duration-300">
               <Lottie animationData={awardLottie} className="h-8 w-8 mx-auto mb-2" loop={true} />
-              <div className="text-2xl font-bold text-white">5+</div>
-              <div className="text-gray-400">Awards Won</div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white">5+</div>
+              <div className="text-gray-600 dark:text-gray-400">Awards Won</div>
             </div>
-            <div className="bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg">
+            <div className="bg-white/50 dark:bg-dark-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg dark:shadow-none transition-colors duration-300">
               <Github className="h-8 w-8 text-accent-red mx-auto mb-2" />
-              <div className="text-2xl font-bold text-white">40+</div>
-              <div className="text-gray-400">Github Repos</div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white">40+</div>
+              <div className="text-gray-600 dark:text-gray-400">Github Repos</div>
             </div>
           </div>
 
           <a
             href="#about"
-            className="inline-block animate-bounce text-gray-400 hover:text-accent-red transition-colors"
+            className="inline-block animate-bounce text-gray-600 dark:text-gray-400 hover:text-accent-red transition-colors"
           >
             <ChevronDown className="h-8 w-8" />
           </a>

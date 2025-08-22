@@ -65,7 +65,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
   }, [autoAnimate, animateSpotlight]);
 
   return (
-    <div ref={divRef} className={`relative rounded-lg border border-neutral-800 bg-neutral-900 overflow-hidden p-8 ${className}`}>
+    <div ref={divRef} className={`relative rounded-lg border border-light-300 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden p-8 shadow-lg dark:shadow-none transition-colors duration-300 ${className}`}>
       <div
         className="pointer-events-none absolute inset-0 opacity-0"
         style={{

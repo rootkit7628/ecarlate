@@ -52,18 +52,18 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-dark-800">
+    <section id="skills" className="py-20 bg-light-50 dark:bg-dark-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
           Skills & Technologies
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-dark-700 p-6 rounded-lg">
+            <div key={index} className="bg-white dark:bg-dark-700 p-6 rounded-lg shadow-lg dark:shadow-none transition-colors duration-300">
               <div className="flex items-center gap-3 mb-4">
                 {category.icon}
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {category.title}
                 </h3>
               </div>
@@ -71,7 +71,7 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="px-4 py-2 bg-dark-600 text-gray-300 rounded-lg hover:bg-dark-800 hover:text-white transition-colors duration-300 flex items-center gap-2"
+                    className="px-4 py-2 bg-light-200 dark:bg-dark-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-light-300 dark:hover:bg-dark-800 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 flex items-center gap-2"
                   >
                     <span>{skill.icon}</span>
                     {skill.name}

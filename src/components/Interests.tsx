@@ -37,9 +37,9 @@ const Interests = () => {
   ];
 
   return (
-    <section id="interests" className="py-20 bg-dark-800">
+    <section id="interests" className="py-20 bg-light-100 dark:bg-dark-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">
+        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
           Personal Interests
         </h2>
 
@@ -47,11 +47,11 @@ const Interests = () => {
           {interests.map((interest, index) => (
             <div
               key={index}
-              className="bg-dark-700 rounded-lg p-6 transform hover:scale-105 transition-all duration-300"
+              className="bg-white dark:bg-dark-700 rounded-lg p-6 transform hover:scale-105 transition-all duration-300 shadow-lg dark:shadow-none"
             >
               <div className="flex items-center gap-4 mb-6">
                 {interest.icon}
-                <h3 className="text-2xl font-semibold text-white">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                   {interest.category}
                 </h3>
               </div>
@@ -60,9 +60,9 @@ const Interests = () => {
                 {interest.items.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
-                    className="bg-dark-800 p-4 rounded-lg hover:bg-dark-600 transition-colors duration-300"
+                    className="bg-light-200 dark:bg-dark-800 p-4 rounded-lg hover:bg-light-300 dark:hover:bg-dark-600 transition-colors duration-300"
                   >
-                    <p className="text-gray-400">
+                    <p className="text-gray-600 dark:text-gray-400">
                       {item.description}
                     </p>
                   </div>
