@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import BackgroundDecorations from '../BackgroundDecorations';
 import ChatButton from '../chat/ChatButton';
 import ChatInterface from '../chat/ChatInterface';
+import BackToTopButton from '../BackToTopButton';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -23,6 +24,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, showNavbar = true }) 
       </main>
       <ChatButton isOpen={isChatOpen} onClick={() => setIsChatOpen(!isChatOpen)} />
       <ChatInterface isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
+      <BackToTopButton />
     </div>
   );
 };
