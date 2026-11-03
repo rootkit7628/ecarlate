@@ -1,0 +1,35 @@
+name: Deploy to rootkit7628.github.io
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      # The site is served by the user-site repo; this repo only holds the source.
+      - uses: peaceiris/actions-gh-pages@v4.1.0
+        with:
+          deploy_key: ${{ secrets.PAGES_DEPLOY_KEY }}
+          external_repository: rootkit7628/rootkit7628.github.io
+          publish_branch: main
+          publish_dir: ./dist
+          force_orphan: true
+          enable_jekyll: false
+          commit_message: "deploy: ${{ github.sha }}"

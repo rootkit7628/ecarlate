@@ -1,12 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://arleme.jinkx.fun/sitemap.xml
-
-# Crawl delay
-Crawl-delay: 1
-
-# Disallow specific paths if needed
-# Disallow: /admin/
-# Disallow: /private/
+Sitemap: https://rootkit7628.github.io/sitemap.xml

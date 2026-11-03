@@ -1,0 +1,134 @@
+{
+  "profile": {
+    "name": "Arlème Johnson",
+    "first": "Arlème",
+    "role": "Fullstack Developer · AI & Developer Tooling",
+    "tagline": "I build fullstack apps and tools that make developers faster — with AI where it actually helps.",
+    "location": "Based in Antananarivo, Madagascar. Shipping from Linux, UTC+3.",
+    "email": "arleme.dev7@gmail.com",
+    "cv": "cv/arleme-johnson-cv.pdf",
+    "about": [
+      "I'm a fullstack developer based in Antananarivo. I build with Python and FastAPI on the back end and Vue.js on the front, then ship with Docker and GitHub Actions, all from a Linux setup I keep tuning.",
+      "Right now I'm going deeper into LLM training and building tools that make developer workflows faster. Off-screen, I practise kendo."
+    ],
+    "facts": [
+      ["Builds with", "Python · FastAPI · Vue.js"],
+      ["Ships with", "Docker · GitHub Actions"],
+      ["Learning", "LLM fine-tuning"],
+      ["Dojo", "Kendo"]
+    ]
+  },
+
+  "hiredBy": ["AM Web Solutions", "Konecta Madagascar", "eTech Consulting"],
+
+  "featured": {
+    "title": "Nirvix",
+    "kanji": "生",
+    "summary": "Build your character: an RPG-style life app where every finished quest levels up one of six character stats. Local-first, on Linux and Android.",
+    "tags": ["Flutter", "Dart", "SQLite", "Claude Code"],
+    "image": "img/nirvix-home.webp",
+    "imageAlt": "Nirvix home screen: character sheet with a radar chart of six stats, level and the Nix mascot",
+    "href": "nirvix.html"
+  },
+
+  "projects": [
+    {
+      "title": "OddsLab",
+      "summary": "A paper-betting lab: collects real odds, compares them with a sharp bookmaker and simulates strategies. No real money, ever.",
+      "tag": "Python · FastAPI",
+      "kanji": "賭",
+      "bg": "linear-gradient(150deg, #2B1A16, #7A2018)",
+      "note": "Private repo"
+    },
+    {
+      "title": "Alandia",
+      "summary": "Madagascar's national parks: map, ratings and a forum. A 2020 hackathon project, rebuilt in 2026.",
+      "tag": "Expo · Flask",
+      "kanji": "森",
+      "bg": "linear-gradient(150deg, #1C1D28, #8E1F18)",
+      "href": "https://github.com/rootkit7628/Alandia"
+    },
+    {
+      "title": "FaceRECON",
+      "summary": "A face-recognition attendance kiosk for schools. Stores 128-number embeddings, never photos.",
+      "tag": "OpenCV · Flask",
+      "kanji": "顔",
+      "bg": "linear-gradient(150deg, #241914, #A0472A)",
+      "href": "https://github.com/rootkit7628/FaceRECON"
+    },
+    {
+      "title": "Careers fair website",
+      "summary": "Floor plan, job sheets and a RIASEC orientation test for a careers fair, with no credentials in the browser.",
+      "tag": "Vue.js · PocketBase",
+      "kanji": "職",
+      "bg": "linear-gradient(150deg, #1A1513, #5E140F)",
+      "href": "https://github.com/rootkit7628/forum-orientation"
+    },
+    {
+      "title": "Ampalibe",
+      "summary": "A Python framework for Facebook Messenger chatbots, built with the iTeam-S community.",
+      "tag": "Python · Open source",
+      "kanji": "機",
+      "bg": "linear-gradient(150deg, #20211F, #6E1712)",
+      "href": "https://github.com/iTeam-S/Ampalibe"
+    },
+    {
+      "title": "Open-source contributions",
+      "summary": "Malagasy translation for wttr.in, the WebSearch module, Malagasy phone numbers for validator.js.",
+      "tag": "Open source",
+      "kanji": "共",
+      "bg": "linear-gradient(150deg, #2B1A16, #C9362C)",
+      "href": "https://github.com/rootkit7628"
+    }
+  ],
+
+  "process": [
+    ["Plan in plain text", "Scope, data model and edge cases written down before any code exists."],
+    ["Build with Claude Code", "AI drafts, I decide: architecture, naming and trade-offs stay mine."],
+    ["Verify, then ship", "Tests, review and CI on every change, deployed with Docker and GitHub Actions."]
+  ],
+
+  "terminal": {
+    "title": "arleme@linux: ~/nirvix",
+    "lines": [
+      ["uname -o", "GNU/Linux · Ubuntu 24.04"],
+      ["claude \"plan the quests screen\"", "→ PLAN.md written · reviewing before build"],
+      ["flutter test", "336 tests passed"],
+      ["git push origin main", "→ GitHub Actions: lint · test · build · deploy"]
+    ]
+  },
+
+  "tools": {
+    "rowA": [["Python", "code", "n"], ["FastAPI", "bolt", "n"], ["Vue.js", "layers", "r"], ["TypeScript", "braces", "n"], ["Flutter", "phone", "n"], ["Odoo", "grid", "n"], ["Docker", "box", "g"], ["GitHub Actions", "flow", "n"]],
+    "rowB": [["Linux", "term", "n"], ["Claude Code", "spark", "r"], ["Flask", "cup", "n"], ["OpenCV", "eye", "n"], ["PostgreSQL", "db", "g"], ["SQLite", "db", "n"], ["Bash", "win", "n"]]
+  },
+
+  "categories": [
+    ["Backend", "Python, FastAPI, Flask, Odoo", "server"],
+    ["Frontend & mobile", "Vue.js, TypeScript, Flutter", "monitor"],
+    ["DevOps", "Docker, GitHub Actions, Linux", "loop"],
+    ["Data", "PostgreSQL, MySQL, SQLite, Redis", "db"],
+    ["AI", "Claude Code, OpenCV; learning LLM fine-tuning", "spark"]
+  ],
+
+  "awards": [
+    ["2023", "ZahaGeek hackathon", "1st place"],
+    ["2021", "Google DevFest hackathon", "3rd place"],
+    ["2021", "MYBN hackathon", "1st place"]
+  ],
+
+  "communities": [
+    ["iTeam-S", "Head and member"],
+    ["GDG Antananarivo", "Core member"],
+    ["GDSC ESTI", "Core member"],
+    ["Why Not Linux Madagascar", "Member"],
+    ["DjangoGirls Antananarivo", "Member"],
+    ["Makoto Japanese Club", "Student member"]
+  ],
+
+  "socials": [
+    ["GitHub", "https://github.com/rootkit7628", "code"]
+  ],
+
+  "notes": []
+}
