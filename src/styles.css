@@ -1177,7 +1177,7 @@ img {
   flex: 1 1 420px;
   min-width: 0;
   position: relative;
-  min-height: 420px;
+  aspect-ratio: 16 / 10; /* height follows the width when the card stacks on small screens */
   overflow: hidden;
   background: linear-gradient(150deg, #2b1a16 0%, #4a1c17 55%, #8e1f18 100%);
 }
@@ -1193,7 +1193,11 @@ img {
   position: absolute;
   left: 8%;
   top: 12%;
+  /* Deliberately wider than the frame (cropped on the right), with its own proportions:
+     the width/height attributes must not stretch it. */
   width: 104%;
+  max-width: none;
+  height: auto;
   border-radius: 6px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(234, 218, 198, 0.25);
