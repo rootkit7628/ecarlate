@@ -183,18 +183,61 @@ function setupPreview() {
   $('.rows')?.addEventListener('mouseleave', () => pv.classList.remove('on'))
 }
 
-// --- Contact form: opens the visitor's email app with the message ready -------------------------
+// --- Contact form: sent through Web3Forms; without a key it opens the visitor's email app -------
 
 function setupForm() {
   const form = $('.form')
   if (!form) return
-  form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const data = new FormData(form)
+  const key = form.dataset.key
+  const note = $('.form-note', form)
+  const button = $('button[type=submit]', form)
+  const label = button.firstChild.textContent
+  if (key) note.textContent = 'Goes straight to my inbox. I reply within a few days.'
+
+  const mailto = (data) => {
     const to = form.getAttribute('action').replace(/^mailto:/, '')
     const subject = `Hello from ${data.get('name')}`
     const body = `${data.get('message')}\n\n${data.get('name')} <${data.get('email')}>`
     location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const data = new FormData(form)
+    if (!key) return mailto(data)
+    if (data.get('botcheck')) return
+
+    button.disabled = true
+    button.firstChild.textContent = 'Sending…'
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: key,
+          subject: `Portfolio: message from ${data.get('name')}`,
+          from_name: data.get('name'),
+          name: data.get('name'),
+          email: data.get('email'),
+          replyto: data.get('email'),
+          message: data.get('message'),
+        }),
+      })
+      const result = await response.json()
+      if (!result.success) throw new Error(result.message)
+      form.reset()
+      note.textContent = 'Message sent. Thank you, I will get back to you soon.'
+    } catch {
+      note.innerHTML = ''
+      note.append('It did not go through. Please write to ')
+      const link = document.createElement('a')
+      link.href = form.getAttribute('action')
+      link.textContent = link.href.replace(/^mailto:/, '')
+      note.append(link, ' directly.')
+    } finally {
+      button.disabled = false
+      button.firstChild.textContent = label
+    }
   })
 }
 

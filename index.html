@@ -189,14 +189,15 @@
 <div class="rv s3">
 <a class="mail mag" href="mailto:{{profile.email}}"><span class="mail-ic"><!--@icon:mail--></span><span class="mail-addr">{{profile.email}}<span class="mail-line" aria-hidden="true"></span></span></a>
 </div>
-<form class="form rv s3" action="mailto:{{profile.email}}" method="post" enctype="text/plain">
+<form class="form rv s3" action="mailto:{{profile.email}}" method="post" enctype="text/plain" data-key="{{profile.formKey}}">
+<input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="form-row">
 <label>Name<span class="fld ev e-field"><input type="text" name="name" autocomplete="name" required><!--@particles--></span></label>
 <label>Email<span class="fld ev e-field"><input type="email" name="email" autocomplete="email" required><!--@particles--></span></label>
 </div>
 <label>Message<span class="fld ev e-field"><textarea name="message" rows="4" required></textarea><!--@particles--></span></label>
 <button class="btn mag ev e-red" type="submit">Send message<!--@particles--></button>
-<p class="form-note">Opens your email app with the message ready to send.</p>
+<p class="form-note" role="status" aria-live="polite">Opens your email app with the message ready to send.</p>
 </form>
 </div>
 </section>
