@@ -108,8 +108,6 @@ function setupHero() {
   const fig = $('.fig-par')
   const sun = $('.sun-par')
   const spot = $('.spot')
-  const slash = $('.slash')
-  const men = $('.men')
 
   hero.addEventListener('mousemove', (e) => {
     const r = hero.getBoundingClientRect()
@@ -124,6 +122,14 @@ function setupHero() {
     fig.style.transform = ''
     sun.style.transform = ''
   })
+}
+
+// --- Strike: a slash, the 面 kanji and a burst of embers in the 3D layer -------------------
+
+function setupStrike() {
+  const hero = $('.hero')
+  const slash = $('.slash')
+  const men = $('.men')
   hero.addEventListener('click', (e) => {
     if (e.target.closest('a,button')) return
     const r = hero.getBoundingClientRect()
@@ -138,6 +144,7 @@ function setupHero() {
     replay(men, 'go')
     replay($('.fig'), 'hit')
     replay($('.sun'), 'sunhit')
+    hero.dispatchEvent(new CustomEvent('strike', { detail: { x, y } }))
   })
 }
 
@@ -158,11 +165,18 @@ function setupMagnetsAndTilts() {
       const r = el.getBoundingClientRect()
       const x = (e.clientX - r.left) / r.width
       const y = (e.clientY - r.top) / r.height
-      el.style.transform = `perspective(1000px) rotateX(${((0.5 - y) * 7).toFixed(2)}deg) rotateY(${((x - 0.5) * 9).toFixed(2)}deg)`
+      const k = Number(el.dataset.tilt || 1)
+      el.style.transform = `perspective(1000px) rotateX(${((0.5 - y) * 7 * k).toFixed(2)}deg) rotateY(${((x - 0.5) * 9 * k).toFixed(2)}deg)`
       el.style.setProperty('--gx', `${(x * 100).toFixed(1)}%`)
       el.style.setProperty('--gy', `${(y * 100).toFixed(1)}%`)
+      el.style.setProperty('--px', (x - 0.5).toFixed(3))
+      el.style.setProperty('--py', (y - 0.5).toFixed(3))
     })
-    el.addEventListener('mouseleave', () => (el.style.transform = ''))
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = ''
+      el.style.setProperty('--px', 0)
+      el.style.setProperty('--py', 0)
+    })
   }
 }
 
@@ -241,11 +255,67 @@ function setupForm() {
   })
 }
 
+// --- Counters: the stats count up the first time they come into view ---------------------------
+
+function setupCounters() {
+  const els = $$('.count')
+  if (calm || !els.length || !('IntersectionObserver' in window)) return
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const { isIntersecting, target } of entries) {
+        if (!isIntersecting) continue
+        io.unobserve(target)
+        const to = Number(target.dataset.to)
+        const start = performance.now()
+        const dur = 1400 + Math.min(1, to / 400) * 600
+        const step = (now) => {
+          const t = Math.min(1, (now - start) / dur)
+          target.textContent = String(Math.round(to * (1 - Math.pow(1 - t, 4))))
+          if (t < 1) requestAnimationFrame(step)
+        }
+        target.textContent = '0'
+        requestAnimationFrame(step)
+      }
+    },
+    { threshold: 0.6 },
+  )
+  els.forEach((el) => io.observe(el))
+}
+
+// --- Lazy enhancements: smooth scrolling, the WebGL hero and the tool globe ---------------------
+
+function webglAvailable() {
+  try {
+    const c = document.createElement('canvas')
+    return !!(c.getContext('webgl2') || c.getContext('webgl'))
+  } catch {
+    return false
+  }
+}
+
+const idle = (fn) => (window.requestIdleCallback ? requestIdleCallback(fn, { timeout: 1200 }) : setTimeout(fn, 300))
+
+async function setupSmoothScroll() {
+  const [{ default: Lenis }] = await Promise.all([import('lenis'), import('lenis/dist/lenis.css')])
+  new Lenis({ autoRaf: true, anchors: { offset: -24 }, lerp: 0.11 })
+}
+
+function setupLazy() {
+  const globe = $('.globe')
+  if (globe) import('./globe.js').then((m) => m.default(globe, { calm }))
+  const lowEnd = navigator.connection?.saveData || (navigator.deviceMemory && navigator.deviceMemory < 2)
+  if (!calm && !lowEnd && webglAvailable()) idle(() => import('./hero3d.js').then((m) => m.default($('.hero'))))
+}
+
 setupScramble()
 setupForm()
+setupCounters()
+if (!calm) setupStrike()
 if (fancy) {
   setupCursor()
   setupHero()
   setupMagnetsAndTilts()
   setupPreview()
+  setupSmoothScroll()
 }
+setupLazy()

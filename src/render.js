@@ -72,7 +72,7 @@ export function facts(c) {
 
 export function featured(c) {
   const f = c.featured
-  return `<a class="feat tilt" href="${esc(f.href)}" data-cur="Open">
+  return `<a class="feat tilt" data-tilt="1.5" href="${esc(f.href)}" data-cur="Open">
   <div class="feat-media rvC">
     <span class="big-k kanji dy" aria-hidden="true">${esc(f.kanji)}</span>
     <img class="feat-shot" src="${esc(f.image)}" alt="${esc(f.imageAlt)}" width="1400" height="900" loading="lazy">
@@ -157,6 +157,27 @@ export function categories(c) {
     .join('')
 }
 
+export function stats(c) {
+  return c.stats
+    .map(
+      ([value, suffix, label], i) =>
+        `<li class="stat rv s${i + 1}"><p class="stat-n"><span class="count" data-to="${esc(value)}">${esc(value)}</span>${suffix ? `<span class="stat-suf">${esc(suffix)}</span>` : ''}</p><p class="mono-sm">${esc(label)}</p></li>`,
+    )
+    .join('')
+}
+
+/** Chips placed on the 3D globe by globe.js; decorative, the marquee already lists the tools. */
+export function globe(c) {
+  const wire =
+    '<div class="globe-wire">' +
+    [0, 30, 60, 90, 120, 150].map((d) => `<i style="transform:rotateY(${d}deg)"></i>`).join('') +
+    '<i class="eq"></i></div>'
+  const chips = [...c.tools.rowA, ...c.tools.rowB]
+    .map(([name, ic, style]) => `<li class="gi ${style}"><span class="chip-ic">${icon(ic, 18)}</span>${esc(name)}</li>`)
+    .join('')
+  return `${wire}<ul class="globe-list">${chips}</ul>`
+}
+
 export function awards(c) {
   return c.awards
     .map(
@@ -202,6 +223,8 @@ export function renderPage(html, content, extra = {}) {
     toolsA,
     toolsB,
     categories,
+    stats,
+    globe,
     awards,
     communities,
     socials,
