@@ -7,16 +7,36 @@
 <meta name="description" content="{{profile.tagline}}">
 <meta property="og:title" content="Arlème Johnson · Fullstack developer">
 <meta property="og:description" content="{{profile.tagline}}">
-<meta property="og:image" content="img/hero-kendo.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rootkit7628.github.io/">
+<meta property="og:image" content="https://rootkit7628.github.io/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arlème Johnson · Fullstack developer">
+<meta name="twitter:description" content="{{profile.tagline}}">
+<meta name="twitter:image" content="https://rootkit7628.github.io/img/og.jpg">
+<link rel="canonical" href="https://rootkit7628.github.io/">
 <meta name="theme-color" content="#140F0D">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;family=Shippori+Mincho+B1:wght@700;800&amp;display=swap">
+<link rel="preload" as="image" href="img/hero-kendo.webp" fetchpriority="high">
 <link rel="stylesheet" href="/src/styles.css">
-<script>document.documentElement.classList.add('js')</script>
+<script>
+document.documentElement.classList.add('js')
+try {
+  if (sessionStorage.getItem('intro') || matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('no-intro')
+  else sessionStorage.setItem('intro', '1')
+} catch (e) { document.documentElement.classList.add('no-intro') }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Arlème Johnson","jobTitle":"Fullstack Developer","url":"https://rootkit7628.github.io/","email":"mailto:arleme.dev7@gmail.com","image":"https://rootkit7628.github.io/img/about.webp","address":{"@type":"PostalAddress","addressLocality":"Antananarivo","addressCountry":"MG"},"knowsAbout":["Python","FastAPI","Vue.js","Flutter","Docker","LLM fine-tuning"],"sameAs":["https://github.com/rootkit7628","https://www.linkedin.com/in/arleme-jhn/"]}
+</script>
 </head>
 <body>
+<div class="intro" aria-hidden="true"><div class="intro-half t"></div><div class="intro-half b"></div><span class="intro-k kanji">鬼</span><span class="intro-cut"></span></div>
 <a class="skip" href="#about">Skip to content</a>
 <div class="root">
 
@@ -72,7 +92,7 @@
 <div class="stage" aria-hidden="true">
 <div class="spot"></div>
 <div class="sun-box"><div class="par sun-par"><div class="ring-dash"></div><div class="ring-thin"></div><div class="sun"></div></div></div>
-<div class="fig-box"><div class="par fig-par"><img class="fig" src="img/hero-kendo.webp" alt="" width="597" height="948"></div></div>
+<div class="fig-box"><div class="par fig-par"><img class="fig" src="img/hero-kendo.webp" alt="" fetchpriority="high" width="597" height="948"></div></div>
 <div class="stage-fade"></div>
 <svg class="slash" viewBox="0 0 420 14" preserveAspectRatio="none"><defs><linearGradient id="slashG" x1="0" x2="1"><stop offset="0" stop-color="#F4EBE1" stop-opacity="0"></stop><stop offset=".5" stop-color="#FFE9E4"></stop><stop offset="1" stop-color="#C9362C" stop-opacity="0"></stop></linearGradient></defs><path d="M0 7 Q210 0 420 7 Q210 14 0 7Z" fill="url(#slashG)"></path></svg>
 <div class="men">面</div>
@@ -94,7 +114,7 @@
 <p class="hero-tr">{{profile.location}}</p>
 <div class="badge">
 <a class="mag" href="#contact" aria-label="Let's talk: go to contact">
-<svg aria-hidden="true" viewBox="0 0 150 150"><defs><path id="badgeRing" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"></path></defs><text><textPath href="#badgeRing">LET'S TALK · LET'S TALK · LET'S TALK ·</textPath></text></svg>
+<svg aria-hidden="true" viewBox="0 0 150 150"><defs><path id="badgeRing" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"></path></defs><text><textPath href="#badgeRing" textLength="362" lengthAdjust="spacing">LET'S TALK · LET'S TALK · </textPath></text></svg>
 <span class="badge-core ev e-red"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"></path></svg><!--@particles:8--></span>
 </a>
 </div>
@@ -159,7 +179,13 @@
 </div>
 <div class="rv s2"><div class="mq top"><div class="mq-track"><!--@toolsA--></div></div></div>
 <div class="rv s3"><div class="mq bottom"><div class="mq-track"><!--@toolsB--></div></div></div>
+<div class="stack-grid wrap">
 <ul class="cats"><!--@categories--></ul>
+<div class="globe-box rv s2">
+<div class="globe" aria-hidden="true"><!--@globe--></div>
+<p class="globe-hint mono-sm" aria-hidden="true">Drag to spin <span class="kanji">回</span></p>
+</div>
+</div>
 </section>
 
 <section id="recognition" class="section wrap" aria-labelledby="recog-title">
@@ -170,6 +196,7 @@
 </div>
 <p class="rv s3">Hackathons won with friends, and the communities where I learned, taught and organised.</p>
 </div>
+<ul class="stats" aria-label="In numbers"><!--@stats--></ul>
 <div class="recog">
 <div><h3 class="mono-sm rv">Hackathons</h3><ul class="awards"><!--@awards--></ul></div>
 <div><h3 class="mono-sm rv">Communities</h3><ul class="groups"><!--@communities--></ul></div>

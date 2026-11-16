@@ -22,6 +22,8 @@ export default defineConfig({
   base: './',
   plugins: [contentPages()],
   build: {
+    // three.js is loaded lazily after the first paint, in its own chunk
+    chunkSizeWarningLimit: 700,
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),

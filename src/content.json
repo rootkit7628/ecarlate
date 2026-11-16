@@ -112,6 +112,13 @@
     ["AI", "Claude Code, OpenCV; learning LLM fine-tuning", "spark"]
   ],
 
+  "stats": [
+    ["3", "", "Hackathon podiums"],
+    ["2", "", "First places"],
+    ["6", "", "Tech communities"],
+    ["336", "", "Tests on Nirvix"]
+  ],
+
   "awards": [
     ["2023", "ZahaGeek hackathon", "1st place"],
     ["2021", "Google DevFest hackathon", "3rd place"],
